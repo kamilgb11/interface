@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona z Menu Nawigacji</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="option" data-option="1">Nowa gra</a></li>
+            <li><a href="#" class="option" data-option="2">Ustawienia</a></li>
+            <li><a href="#" class="option" data-option="3">Statystyki</a></li>
+            <li><a href="#" class="option" data-option="4">Inne</a></li>
+            <li><a href="#" class="option" data-option="5">Wyjdź z gry</a></li>
+        </ul>
+    </nav>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-title">Wybierz jedną z opcji:</p>
+            <ul id="modal-options">
+            </ul>
+        </div>
+    </div>
+    <div id="settings">
+        <div id="graphics-settings" class="settings-content hidden-settings">
+            <span class="close" onclick="closeSettings('graphics-settings')">&times;</span>
+            <h3>Grafika</h3>
+            <ul>
+                <li><a href="#">Rozdzielczość</a></li>
+                <li><a href="#">Jakość textur</a></li>
+                <li><a href="#">Jakość cieni</a></li>
+                <li><a href="#">Jakość wody</a></li>
+                <li><a href="#">Jakość efektów</a></li>
+                <li><a href="#">Domyślne</a></li>
+            </ul>
+        </div>
+        
+        <div id="controls-settings" class="settings-content hidden-settings">
+            <span class="close" onclick="closeSettings('controls-settings')">&times;</span>
+            <h3>Wybierz sterowanie</h3>
+            <ul>
+                <li><a href="#">Myszka i klawiatura</a></li>
+                <li><a href="#">Kontroler</a></li>
+            </ul>
+        </div>
+
+        <div id="interface-settings" class="settings-content hidden-settings">
+            <span class="close" onclick="closeSettings('interface-settings-settings')">&times;</span>
+            <h3>Interfejs</h3>
+            <ul>
+                <li><a href="#">Rozmiar interfejsu</a></li>
+                <li><a href="#">Kolory</a></li>
+            </ul>
+        </div>
+
+        <div id="audio-settings" class="settings-content hidden-settings">
+            <span class="close" onclick="closeSettings('audio-settings')">&times;</span>
+            <h3>Audio</h3>
+            <ul>
+                <li><a href="#">Muzyka w menu</a></li>
+                <li><a href="#">Audio podczas rozgrywki</a></li>
+                <li><a href="#">Mono</a></li>
+                <li><a href="#">Stereo</a></li>
+            </ul>
+        </div>
+
+        <div id="roz-settings" class="settings-content hidden-settings">
+            <span class="close" onclick="closeSettings('roz-settings')">&times;</span>
+            <h3>Rozgrywka</h3>
+            <ul>
+                <li><a href="#">Znajomi</a></li>
+                <li><a href="#">Czat</a></li>
+                <li><a href="#">Kody</a></li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
